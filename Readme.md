@@ -1,7 +1,5 @@
 # EdS
 
-## Software Engineering Project
-
 ```
 npm install
 npm start
