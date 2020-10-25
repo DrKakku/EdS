@@ -1,8 +1,6 @@
-# Header H1
-EdS
+# EdS
 
-## Sub Topic Headings H2
-Software Engineering Project
+## Software Engineering Project
 
 ```
 npm install
