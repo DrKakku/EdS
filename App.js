@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Alert, BackHandler } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { useBackHandler } from "@react-native-community/hooks";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -17,6 +17,20 @@ import Signup from "./components/signup";
 const Tab = createMaterialBottomTabNavigator();
 
 function MyTab() {
+  useEffect(() => {
+    BackHandler.addEventListener("hardwareBackPress", _handleBackButton);
+    return () =>
+      BackHandler.removeEventListener("hardwareBackPress", () => true);
+  }, []);
+  const _handleBackButton = () => {
+    Alert.alert(
+      "Back Button Disabled!",
+      "",
+      [{ text: "OK", onPress: () => console.log("OK Pressed") }],
+      { cancelable: false }
+    );
+    return true;
+  };
   return (
     <Tab.Navigator
       initialRouteName="Dashboard"
@@ -116,14 +130,6 @@ function MyStack() {
     </Stack.Navigator>
   );
 }
-
-/*export default function App() {
-  return (
-    <NavigationContainer>
-      <MyTab />
-    </NavigationContainer>
-  );
-}*/
 
 export default function App() {
   return (
