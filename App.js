@@ -98,7 +98,11 @@ function MyTabs() {
         options={{
           tabBarLabel: "Task",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="note" color={color} size={26} />
+            <MaterialCommunityIcons
+              name="calendar-check"
+              color={color}
+              size={26}
+            />
           ),
         }}
       />
@@ -108,7 +112,11 @@ function MyTabs() {
         options={{
           tabBarLabel: "Attendance",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="note" color={color} size={26} />
+            <MaterialCommunityIcons
+              name="percent-outline"
+              color={color}
+              size={26}
+            />
           ),
         }}
       />
