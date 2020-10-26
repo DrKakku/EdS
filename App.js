@@ -14,16 +14,12 @@ import Login from "./components/login";
 import Signup from "./components/signup";
 import Dashboard from "./components/dashboard";
 
-function LoggedIn({ navigation }) {
-  return navigation.navigate(MyTab);
-}
-
 const Tab = createMaterialBottomTabNavigator();
 
 function MyTab() {
   return (
     <Tab.Navigator
-      initialRouteName="Dashboard"
+      initialRouteName="Dashboard1"
       activeColor="#f0edf6"
       inactiveColor="#000"
       labelStyle={{ fontSize: 12 }}
@@ -31,7 +27,7 @@ function MyTab() {
       shifting={true}
     >
       <Tab.Screen
-        name="Dashboard"
+        name="Dashboard1"
         component={Dashboard1}
         options={{
           tabBarLabel: "Dashboard",
@@ -120,9 +116,9 @@ function MyStack() {
         options={({ title: "Login" }, { headerLeft: null })}
       />
       <Stack.Screen
-        name="App"
-        component={LoggedIn}
-        options={({ title: "Welcome" }, { headerLeft: null })}
+        name="Dashboard"
+        component={Dashboard}
+        options={{ title: "Dashboard" }}
       />
     </Stack.Navigator>
   );
