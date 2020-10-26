@@ -200,7 +200,6 @@ export default function Start() {
     >
       <View style={bgStyle().screen}>
         {/* // Body */}
-        <StatusBar hidden />
         <View style={bgStyle().body}>
           <View style={styles.header}>
             <TouchableHighlight onPress={screenHandler}>

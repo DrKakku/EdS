@@ -1,10 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import { useBackHandler } from "@react-native-community/hooks";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Dashboard1 from "./src/Dashboard";
+import Dashboard from "./src/Dashboard";
 import Profile from "./src/Profile";
 import NotesScreenComponent from "./src/Notes/NotesScreenComponent";
 import Task from "./src/Task/TaskComponent";
@@ -12,14 +13,13 @@ import Attendance from "./src/Attendance/AttendanceComponent";
 
 import Login from "./components/login";
 import Signup from "./components/signup";
-import Dashboard from "./components/dashboard";
 
 const Tab = createMaterialBottomTabNavigator();
 
 function MyTab() {
   return (
     <Tab.Navigator
-      initialRouteName="Dashboard1"
+      initialRouteName="Dashboard"
       activeColor="#f0edf6"
       inactiveColor="#000"
       labelStyle={{ fontSize: 12 }}
@@ -27,8 +27,8 @@ function MyTab() {
       shifting={true}
     >
       <Tab.Screen
-        name="Dashboard1"
-        component={Dashboard1}
+        name="Dashboard"
+        component={Dashboard}
         options={{
           tabBarLabel: "Dashboard",
           tabBarIcon: ({ color }) => (
@@ -95,14 +95,7 @@ function MyStack() {
     <Stack.Navigator
       initialRouteName="Signup"
       screenOptions={{
-        headerTitleAlign: "center",
-        headerStyle: {
-          backgroundColor: "#3740FE",
-        },
-        headerTintColor: "#fff",
-        headerTitleStyle: {
-          fontWeight: "bold",
-        },
+        headerShown: false,
       }}
     >
       <Stack.Screen
@@ -116,9 +109,9 @@ function MyStack() {
         options={({ title: "Login" }, { headerLeft: null })}
       />
       <Stack.Screen
-        name="Dashboard"
-        component={Dashboard}
-        options={{ title: "Dashboard" }}
+        name="Hey"
+        component={MyTab}
+        options={({ title: "Welcome, Rahul" }, { headerLeft: null })}
       />
     </Stack.Navigator>
   );

@@ -1,4 +1,4 @@
-import { StatusBa } from "expo-status-bar";
+import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Subjects from "./Subjects";

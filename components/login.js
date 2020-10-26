@@ -37,14 +37,14 @@ export default class Login extends Component {
         .auth()
         .signInWithEmailAndPassword(this.state.email, this.state.password)
         .then((res) => {
-          console.log(res);
-          console.log("User logged-in successfully!");
+          /*console.log(res);
+          console.log("User logged-in successfully!");*/
           this.setState({
             isLoading: false,
             email: "",
             password: "",
           });
-          this.props.navigation.navigate("Dashboard");
+          this.props.navigation.navigate("Hey");
         })
         .catch((error) => this.setState({ errorMessage: error.message }));
     }
@@ -63,12 +63,14 @@ export default class Login extends Component {
         <TextInput
           style={styles.inputStyle}
           placeholder="Email"
+          autoCapitalize="none"
           value={this.state.email}
           onChangeText={(val) => this.updateInputVal(val, "email")}
         />
         <TextInput
           style={styles.inputStyle}
           placeholder="Password"
+          autoCapitalize="none"
           value={this.state.password}
           onChangeText={(val) => this.updateInputVal(val, "password")}
           maxLength={15}

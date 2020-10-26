@@ -41,7 +41,7 @@ export default class Signup extends Component {
           res.user.updateProfile({
             displayName: this.state.displayName,
           });
-          console.log("User registered successfully!");
+          //console.log("User registered successfully!");
           this.setState({
             isLoading: false,
             displayName: "",
@@ -73,12 +73,14 @@ export default class Signup extends Component {
         <TextInput
           style={styles.inputStyle}
           placeholder="Email"
+          autoCapitalize="none"
           value={this.state.email}
           onChangeText={(val) => this.updateInputVal(val, "email")}
         />
         <TextInput
           style={styles.inputStyle}
           placeholder="Password"
+          autoCapitalize="none"
           value={this.state.password}
           onChangeText={(val) => this.updateInputVal(val, "password")}
           maxLength={15}
