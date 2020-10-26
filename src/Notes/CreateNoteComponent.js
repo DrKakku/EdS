@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { StyleSheet, TextInput, Button, View } from "react-native";
 
 const CreateNoteComponent = (props) => {
-  //console.log(props);
   const [newNoteText, setNewNoteText] = useState("");
 
   return (
@@ -14,11 +13,7 @@ const CreateNoteComponent = (props) => {
         multiline={true}
         value={newNoteText}
         onChangeText={(currentText) => {
-          //if(currentText.length > 10) {
-          //console.log("Not allows");
-          // } else {
           setNewNoteText(currentText);
-          // }
         }}
       />
       <Button
