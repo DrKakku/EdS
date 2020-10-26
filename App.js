@@ -1,16 +1,13 @@
 import * as React from "react";
-import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { color } from "react-native-reanimated";
 
 import Dashboard from "./src/Dashboard";
 import Profile from "./src/Profile";
-import Notifications from "./src/Notifications";
 import NotesScreenComponent from "./src/Notes/NotesScreenComponent";
-import Task from "./src/Task/Start_Task";
-import Attendance from "./src/Attendance/Attendance";
+import Task from "./src/Task/TaskComponent";
+import Attendance from "./src/Attendance/AttendanceComponent";
 
 const Tab = createMaterialBottomTabNavigator();
 
