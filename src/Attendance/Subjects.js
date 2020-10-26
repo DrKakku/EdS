@@ -105,7 +105,7 @@ export default class Subjects extends Component {
     return (
       <View style={{ flex: 1, ...Elevation[4] }}>
         <TextInput
-          placeholder="Subject Name"
+          placeholder="Subject"
           onChangeText={(data) => this.setState({ textInputholder: data })}
           style={Substyle.textInput}
           underlineColorAndroid="transparent"

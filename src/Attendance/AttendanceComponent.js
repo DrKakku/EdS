@@ -11,14 +11,3 @@ export default function Attendance() {
     </View>
   );
 }
-
-/*const styles = StyleSheet.create({
-  BG: {
-    backgroundColor: "#fff",
-    flex: 1,
-  },
-  content: {
-    flex: 1,
-    marginTop: 50,
-  },
-});*/
