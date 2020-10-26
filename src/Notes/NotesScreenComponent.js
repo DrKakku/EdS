@@ -20,14 +20,7 @@ function NotesScreenComponent() {
       Alert.alert(
         "Not Allowed :(",
         "Enter some text!",
-        [
-          {
-            text: "Cancel",
-            onPress: () => {},
-            style: "cancel",
-          },
-          { text: "OK", onPress: () => {} },
-        ],
+        [{ text: "OK", onPress: () => {} }],
         { cancelable: false }
       );
     }
