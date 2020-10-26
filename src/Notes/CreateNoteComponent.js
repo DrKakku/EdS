@@ -8,6 +8,7 @@ const CreateNoteComponent = (props) => {
   return (
     <View>
       <TextInput
+        placeholder="Add Note"
         style={styles.textInputStyles}
         autoCorrect={false}
         autoCapitalize="none"

@@ -51,6 +51,11 @@ const Theme = StyleSheet.create({
     borderRadius: 30,
     alignSelf: "center",
   },
+  viewProperties: {
+    marginTop: 50,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
 
 export default Theme;
