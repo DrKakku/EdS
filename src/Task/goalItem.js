@@ -71,13 +71,11 @@ export default function GoalItem(props) {
             <Text style={{ color: colorArr[0] }}>
               {" "}
               {props.startDate.getHours()}:{props.startDate.getMinutes()}
-              ,O'Clock{" "}
             </Text>
           </View>
-
           <View style={{ flex: 1 }}>
             <Text style={{ color: colorArr[9] }}>
-              {props.endDate.getHours()}:{props.endDate.getMinutes()},O'Clock{" "}
+              {props.endDate.getHours()}:{props.endDate.getMinutes()}
             </Text>
           </View>
         </View>

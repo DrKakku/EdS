@@ -45,7 +45,7 @@ function MyTabs() {
       activeColor="#f0edf6"
       inactiveColor="#000"
       labelStyle={{ fontSize: 12 }}
-      barStyle={{ backgroundColor: "#297bff" }}
+      barStyle={{ backgroundColor: "#2296f3" }}
       shifting={true}
     >
       <Tab.Screen
@@ -55,16 +55,6 @@ function MyTabs() {
           tabBarLabel: "Dashboard",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Notifications"
-        component={Notifications}
-        options={{
-          tabBarLabel: "Updates",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={26} />
           ),
         }}
       />
