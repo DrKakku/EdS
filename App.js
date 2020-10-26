@@ -14,9 +14,13 @@ import Login from "./components/login";
 import Signup from "./components/signup";
 import Dashboard from "./components/dashboard";
 
+function LoggedIn({ navigation }) {
+  return navigation.navigate(MyTab);
+}
+
 const Tab = createMaterialBottomTabNavigator();
 
-function Navigation() {
+function MyTab() {
   return (
     <Tab.Navigator
       initialRouteName="Dashboard"
@@ -117,7 +121,7 @@ function MyStack() {
       />
       <Stack.Screen
         name="App"
-        component={Navigation}
+        component={LoggedIn}
         options={({ title: "Welcome" }, { headerLeft: null })}
       />
     </Stack.Navigator>
@@ -127,7 +131,7 @@ function MyStack() {
 /*export default function App() {
   return (
     <NavigationContainer>
-      <Navigation />
+      <MyTab />
     </NavigationContainer>
   );
 }*/
