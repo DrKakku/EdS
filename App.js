@@ -112,11 +112,7 @@ function MyTabs() {
         options={{
           tabBarLabel: "Attendance",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="percent-outline"
-              color={color}
-              size={26}
-            />
+            <MaterialCommunityIcons name="percent" color={color} size={26} />
           ),
         }}
       />
