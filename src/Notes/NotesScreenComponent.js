@@ -16,6 +16,20 @@ function NotesScreenComponent() {
   const addNewNote = (text) => {
     if (text.length > 0) {
       setData([{ text: text, date: new Date() }, ...data]);
+    } else {
+      Alert.alert(
+        "Not Allowed :(",
+        "Enter some text!",
+        [
+          {
+            text: "Cancel",
+            onPress: () => {},
+            style: "cancel",
+          },
+          { text: "OK", onPress: () => {} },
+        ],
+        { cancelable: false }
+      );
     }
   };
 
