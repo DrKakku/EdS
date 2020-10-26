@@ -1,7 +1,6 @@
 import { StatusBa } from "expo-status-bar";
 import React, { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import Header from "./Header";
 import Subjects from "./Subjects";
 
 export default function Attendance() {

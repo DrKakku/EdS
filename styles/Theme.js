@@ -4,7 +4,7 @@ const Theme = StyleSheet.create({
   screen: {
     height: "100%",
     width: "100%",
-    backgroundColor: "#264653",
+    backgroundColor: "#f2f2f2",
   },
 
   body: {

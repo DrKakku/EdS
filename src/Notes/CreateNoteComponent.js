@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { StyleSheet, TextInput, Button, View } from "react-native";
+import { TextInput, Button, View } from "react-native";
+import styles from "./Theme";
 
 const CreateNoteComponent = (props) => {
   const [newNoteText, setNewNoteText] = useState("");
@@ -26,16 +27,5 @@ const CreateNoteComponent = (props) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  textInputStyles: {
-    borderWidth: 5,
-    width: 320,
-    height: 140,
-    borderRadius: 10,
-    padding: 15,
-    fontSize: 30,
-  },
-});
 
 export default CreateNoteComponent;

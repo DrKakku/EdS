@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 const SingleNoteSummaryComponent = (props) => {
-  //console.log(props)
   return (
     <View backgroundColor={randomBackground()} style={styles.textViewStyle}>
       <Text> {props.myNoteDate.toDateString()} </Text>
@@ -12,15 +11,11 @@ const SingleNoteSummaryComponent = (props) => {
 };
 
 const randomBackground = () => {
-  var red = Math.floor(Math.random() * 255); // 123
-  var green = Math.floor(Math.random() * 255); // 45
-  var blue = Math.floor(Math.random() * 255); // 43
+  var red = Math.floor(Math.random() * 255);
+  var green = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
 
-  // String Interpolation
-  // In a string -> isnert a value of some other data type
-  // ""  ''  ``
-
-  return `rgb(${red}, ${green}, ${blue})`; // rgb(123, 45, 43)
+  return `rgb(${red}, ${green}, ${blue})`;
 };
 
 const styles = StyleSheet.create({
