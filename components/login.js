@@ -5,6 +5,7 @@ import {
   View,
   TextInput,
   Button,
+  TouchableOpacity,
   Alert,
   ActivityIndicator,
 } from "react-native";
@@ -26,7 +27,7 @@ export default class Login extends Component {
     this.setState(state);
   };
 
-  userLogin = () => {
+  userLogin() {
     if (this.state.email === "" && this.state.password === "") {
       Alert.alert("Enter details to signin!");
     } else {
@@ -48,7 +49,7 @@ export default class Login extends Component {
         })
         .catch((error) => this.setState({ errorMessage: error.message }));
     }
-  };
+  }
 
   render() {
     if (this.state.isLoading) {
@@ -76,12 +77,11 @@ export default class Login extends Component {
           maxLength={15}
           secureTextEntry={true}
         />
-        <Button
-          color="#3740FE"
-          title="Signin"
-          onPress={() => this.userLogin()}
-        />
-
+        <TouchableOpacity onPress={() => this.userLogin()}>
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            SignIn
+          </Text>
+        </TouchableOpacity>
         <Text
           style={styles.loginText}
           onPress={() => this.props.navigation.navigate("Signup")}
@@ -124,5 +124,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#fff",
+  },
+  button: {
+    width: "90%",
+    height: 40,
+    padding: 10,
+    borderRadius: 8,
+    marginTop: 10,
+    alignSelf: "center",
+    marginBottom: 20,
+  },
+  buttonText: {
+    fontFamily: "",
+    color: "#000",
+    textAlign: "center",
+    fontWeight: "bold",
   },
 });

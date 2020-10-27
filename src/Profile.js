@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Button } from "react-native";
+import { StyleSheet, View, Text, Button, TouchableOpacity } from "react-native";
 import firebase from "../database/firebase";
 
 export default class Profile extends Component {
@@ -29,7 +29,11 @@ export default class Profile extends Component {
       <View style={styles.container}>
         <Text style={styles.textStyle}>Hello, {this.state.displayName}</Text>
 
-        <Button color="#3740FE" title="Logout" onPress={() => this.signOut()} />
+        <TouchableOpacity onPress={() => this.signOut()}>
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            LogOut
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }

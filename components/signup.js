@@ -5,6 +5,7 @@ import {
   View,
   TextInput,
   Button,
+  TouchableOpacity,
   Alert,
   ActivityIndicator,
 } from "react-native";
@@ -86,11 +87,11 @@ export default class Signup extends Component {
           maxLength={15}
           secureTextEntry={true}
         />
-        <Button
-          color="#3740FE"
-          title="Signup"
-          onPress={() => this.registerUser()}
-        />
+        <TouchableOpacity onPress={() => this.registerUser()}>
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            SignUp
+          </Text>
+        </TouchableOpacity>
 
         <Text
           style={styles.loginText}

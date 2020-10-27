@@ -23,12 +23,9 @@ function MyTab() {
       BackHandler.removeEventListener("hardwareBackPress", () => true);
   }, []);
   const _handleBackButton = () => {
-    Alert.alert(
-      "Back Button Disabled!",
-      "",
-      [{ text: "OK", onPress: () => console.log("OK Pressed") }],
-      { cancelable: false }
-    );
+    Alert.alert("Back Button Disabled!", "", [{ text: "OK" }], {
+      cancelable: false,
+    });
     return true;
   };
   return (

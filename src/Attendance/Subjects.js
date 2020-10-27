@@ -225,6 +225,7 @@ const Substyle = StyleSheet.create({
     marginBottom: 20,
   },
   buttonText: {
+    fontFamily: "",
     color: Theme.textcol.color,
     textAlign: "center",
     fontWeight: "bold",
