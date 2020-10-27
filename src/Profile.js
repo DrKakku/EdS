@@ -30,7 +30,9 @@ export default class Profile extends Component {
         <Text style={styles.textStyle}>Hello, {this.state.displayName}</Text>
 
         <TouchableOpacity onPress={() => this.signOut()}>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+          <Text
+            style={{ fontFamily: "", textAlign: "center", fontWeight: "bold" }}
+          >
             LogOut
           </Text>
         </TouchableOpacity>
